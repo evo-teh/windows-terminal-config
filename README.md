@@ -15,7 +15,17 @@ From `powershell` run `notepad $PROFILE` and add the content below:
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
+
+for($i = 1; $i -le 5; $i++){
+  $u =  "".PadLeft($i,"u")
+  $unum =  "u$i"
+  $d =  $u.Replace("u","../")
+  Invoke-Expression "function $u { push-location $d }"
+  Invoke-Expression "function $unum { push-location $d }"
+}
 ```
+
+Install the font CascadiaPL: https://github.com/microsoft/cascadia-code/releases
 
 Save and restart Windows Terminal.
 
