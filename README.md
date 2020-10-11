@@ -69,7 +69,7 @@ Save and restart Windows Terminal.
       // Put settings here that you want to apply to all profiles.
       "fontFace": "Cascadia Code PL",
       "useAcrylic": true,
-      "acrylicOpacity": 0.4
+      "acrylicOpacity": 0.6
     },
     "list": [
       {
