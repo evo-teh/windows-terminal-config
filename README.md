@@ -16,6 +16,14 @@ Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox
 
+#Autocomplete
+Import-Module PSReadLine
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineOption -ShowToolTips
+Set-PSReadLineOption -PredictionSource History
+
 for($i = 1; $i -le 5; $i++){
   $u =  "".PadLeft($i,"u")
   $unum =  "u$i"
